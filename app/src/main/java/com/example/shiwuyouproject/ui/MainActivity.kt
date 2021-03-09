@@ -10,6 +10,7 @@ import com.example.shiwuyouproject.ui.fragment.HomeFragment
 import com.example.shiwuyouproject.ui.fragment.MessageFragment
 import com.example.shiwuyouproject.ui.fragment.MyFragment
 import com.example.shiwuyouproject.ui.modelview.MainViewModel
+import com.example.shiwuyouproject.utils.ActStartUtils
 import java.util.*
 
 class MainActivity : BaseVmActivity<ActivityMainBinding, MainViewModel>(){
@@ -43,7 +44,8 @@ class MainActivity : BaseVmActivity<ActivityMainBinding, MainViewModel>(){
         setCurrent(0)
     }
         mBinding.mainTabCurriculum.setOnClickListener {
-            setCurrent(1)
+            ActStartUtils.startAct(this, LoginActivity::class.java)
+//            setCurrent(1)
         }
         mBinding.mainTabMessage.setOnClickListener {
             setCurrent(2)

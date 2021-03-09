@@ -1,9 +1,12 @@
 package com.example.shiwuyouproject.net.http
 import com.example.shiwuyouproject.base.BaseBean
 import com.example.shiwuyouproject.net.bean.User
+import com.example.shiwuyouproject.ui.bean.SmsSendBean
 import okhttp3.RequestBody
 import retrofit2.http.Body
 import retrofit2.http.POST
+import retrofit2.http.Query
+
 /**
  * Created by yechaoa on 2020/2/4.
  * Describe :
@@ -11,10 +14,18 @@ import retrofit2.http.POST
 interface Api {
 
     companion object {
-        const val BASE_URL = "http://jwushui.seater.cn:81/jeecg-boot/"
-        const val BASE_IMGURL="http://jwushui.seater.cn:81/jeecg-boot/sys/common/static/"
+        const val BASE_URL = "http://www.icootoo.com/fastks/public/api/"
     }
     //登录
-    @POST("sys/login")
+    @POST("sms/send")
     suspend fun login(@Body requestBody: RequestBody): BaseBean<User>
+    /**
+     * 获取验证码
+     * mobile手机号
+     * event： register,resetpwd
+     */
+    @POST("sms/send")
+    suspend fun smsSend(@Query("mobile")mobile:String,
+                        @Query("event")event:String):
+            BaseBean<SmsSendBean>
 }
