@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F2F4F7"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_65"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dip_5"
+            android:padding="@dimen/dip_10"
+            android:src="@mipmap/icon_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dip_30"
+            android:text="奖励荣誉"
+            android:textColor="@color/myColor"
+            android:textSize="@dimen/dip_18"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dip_20"
+            android:background="@drawable/mybg1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_190"
+                android:layout_margin="@dimen/dip_10"
+                android:background="@drawable/pf_boder">
+
+                <EditText
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入相关荣誉介绍，20字以内"
+                    android:maxLength="20"
+                    android:minLines="10"
+                    android:padding="@dimen/dip_5"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dip_10"
+                android:text="添加能证名荣誉的照片，最多5张"
+                android:textColor="@color/myColor" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bt_sava"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dip_40"
+            android:layout_marginRight="@dimen/dip_40"
+            android:layout_marginBottom="@dimen/dip_10"
+            android:background="@drawable/hom_bt_bg"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_16sp" />
+    </RelativeLayout>
+</LinearLayout>

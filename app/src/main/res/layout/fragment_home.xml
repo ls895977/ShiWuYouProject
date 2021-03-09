@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_65"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dip_30"
+            android:text="TEACHER"
+            android:textColor="@color/myColor"
+            android:textSize="@dimen/dip_18" />
+    </RelativeLayout>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dip_5">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/myBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_180" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dip_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_lianxi"
+                        android:gravity="center"
+                        android:text="练习"
+                        android:textColor="@color/myColor"
+                        android:textSize="@dimen/fond_14sp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_tuijian"
+                        android:gravity="center"
+                        android:text="推荐有奖"
+                        android:textColor="@color/myColor"
+                        android:textSize="@dimen/fond_14sp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_kejian"
+                        android:gravity="center"
+                        android:text="课件"
+                        android:textColor="@color/myColor"
+                        android:textSize="@dimen/fond_14sp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_kaoshi"
+                        android:gravity="center"
+                        android:text="考试必读"
+                        android:textColor="@color/myColor"
+                        android:textSize="@dimen/fond_14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/xin_xi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_80"
+                    android:layout_marginTop="@dimen/dip_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_weirenzhen" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dip_110"
+                        android:layout_marginTop="@dimen/dip_15"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="完善个人信息快速兼课"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fond_17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dip_5"
+                            android:text="注册24小时内完善个人信息有机会获得红包哦"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fond_10sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/myCurrent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dip_10"
+                        android:text="我的课程表"
+                        android:textColor="@color/myColor"
+                        android:textSize="@dimen/fond_16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dip_160"
+                        android:layout_margin="@dimen/dip_10"
+                        android:background="@drawable/home_boder"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dip_10"
+                                android:text="2019年12月08日"
+                                android:textColor="@color/myColor"
+                                android:textSize="@dimen/fond_16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:padding="@dimen/dip_10"
+                                android:text="星期三"
+                                android:textColor="@color/myColor"
+                                android:textSize="@dimen/fond_16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/dip_10"
+                                android:text="20:00"
+                                android:textColor="#445DFD"
+                                android:textSize="@dimen/fond_39sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dip_10"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="千变万花教育培训"
+                                    android:textColor="@color/myColor"
+                                    android:textSize="@dimen/fond_13sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dip_5"
+                                    android:text="数学初三课程"
+                                    android:textColor="#445DFD"
+                                    android:textSize="@dimen/fond_13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dip_1"
+                            android:layout_marginLeft="@dimen/dip_10"
+                            android:layout_marginTop="@dimen/dip_5"
+                            android:layout_marginRight="@dimen/dip_10"
+                            android:background="#f0f0f0" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/dip_10"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:text="距上课时间还有"
+                                        android:textColor="@color/myColor"
+                                        android:textSize="@dimen/fond_13sp"
+                                        android:layout_height="wrap_content"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:text="22小时38分钟"
+                                        android:textColor="#FF3131"
+                                        android:layout_marginLeft="@dimen/dip_10"
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/fond_16sp"
+                                        android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:text="/请您准备好你的课件，准时报到上课"
+                                    android:textColor="#999999"
+                                    android:paddingTop="@dimen/dip_2"
+                                    android:textSize="@dimen/fond_12sp"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/dip_100"
+                                android:layout_height="@dimen/dip_35"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dip_10"
+                                android:background="@drawable/main_boder_bg"
+                                android:gravity="center"
+                                android:text="设置闹钟"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/fond_16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dip_10"
+                    android:text="新闻资讯"
+                    android:textColor="@color/myColor"
+                    android:textSize="@dimen/fond_16sp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_RecyclerView"
+                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

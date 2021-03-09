@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_200">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_150"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_logintop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_65">
+
+            <ImageView
+                android:id="@+id/tv_register_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dip_5"
+                android:padding="@dimen/dip_10"
+                android:src="@mipmap/icon_left"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dip_100"
+            android:layout_height="@dimen/dip_100"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/shiwuyou" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dip_20"
+        android:paddingRight="@dimen/dip_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dip_10"
+            android:text="注册"
+            android:textColor="@color/myColor"
+            android:textSize="@dimen/fond_18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginTop="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_shouji"
+            android:drawablePadding="@dimen/dip_10"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:textColor="@color/myColor"
+            android:textColorHint="#DBDBDB"
+            android:textSize="@dimen/fond_16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_0.1"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="#F3F5F7" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginTop="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_yzm"
+            android:drawablePadding="@dimen/dip_10"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:textColor="@color/myColor"
+            android:textColorHint="#DBDBDB"
+            android:textSize="@dimen/fond_16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_0.1"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="#F3F5F7" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginTop="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_psd"
+            android:drawablePadding="@dimen/dip_10"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/myColor"
+            android:textColorHint="#DBDBDB"
+            android:textSize="@dimen/fond_16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_0.1"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="#F3F5F7" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginTop="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_psd1"
+            android:drawablePadding="@dimen/dip_10"
+            android:hint="请确认密码"
+            android:inputType="textPassword"
+            android:textColor="@color/myColor"
+            android:textColorHint="#DBDBDB"
+            android:textSize="@dimen/fond_16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_0.1"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="#F3F5F7" />
+        <TextView
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_marginLeft="@dimen/dip_20"
+            android:layout_marginTop="@dimen/dip_40"
+            android:layout_marginRight="@dimen/dip_20"
+            android:background="@drawable/hom_bt_bg"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_16sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip_40"
+            android:paddingLeft="@dimen/dip_10"
+            android:paddingRight="@dimen/dip_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户协议"
+                android:textColor="#707070"
+                android:textSize="@dimen/fond_14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已有账号？"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <TextView
+                    android:id="@+id/bt_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去登录"
+                    android:textColor="#445DFD"
+                    android:textSize="@dimen/fond_14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

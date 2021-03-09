@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_65"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dip_5"
+            android:padding="@dimen/dip_10"
+            android:src="@mipmap/icon_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dip_30"
+            android:text="老师信息"
+            android:textColor="@color/myColor"
+            android:textSize="@dimen/dip_18"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dip_60"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_10"
+                android:padding="@dimen/dip_15"
+                android:text="个人信息"
+                android:textColor="@color/myColor"
+                android:textSize="@dimen/fond_16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="@drawable/mybg1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/bt_Universityonisgrad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="毕业院校"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/tv_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="职称"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_RewardsAndHonors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="奖励荣誉"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_10"
+                android:padding="@dimen/dip_15"
+                android:text="教学情况（必填）"
+                android:textColor="@color/myColor"
+                android:textSize="@dimen/fond_16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="@drawable/mybg1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/bt_TeachingExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="教学经历"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_SuccessfulCase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="成功案例"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_TeachingCharacterist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="教学特点"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_10"
+                android:padding="@dimen/dip_15"
+                android:text="个人偏好"
+                android:textColor="@color/myColor"
+                android:textSize="@dimen/fond_16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="@drawable/mybg1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/bt_TeachingExperience1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="教学经历"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_TeachingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="授课地址"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_teachingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="授课时间"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_0.1"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_marginRight="@dimen/dip_10"
+                    android:background="#F2F4F7" />
+                <TextView
+                    android:id="@+id/bt_TeachingSubjects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="教学科目"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

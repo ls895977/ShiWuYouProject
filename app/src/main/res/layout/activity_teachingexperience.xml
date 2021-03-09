@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_65"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dip_5"
+            android:padding="@dimen/dip_10"
+            android:src="@mipmap/icon_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dip_30"
+            android:text="教学经历"
+            android:textColor="@color/myColor"
+            android:textSize="@dimen/dip_18"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dip_0.1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybg1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dip_20">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="教学标题"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dip_150"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:gravity="right"
+                    android:hint="请输入教学标题20字以内"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="开始时间"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="选择时间"
+                    android:textColor="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="结束时间"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="选择时间"
+                    android:textColor="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:drawablePadding="@dimen/dip_10"
+                android:gravity="top"
+                android:hint="请描述你曾任职的学校和岗位，具体内容，研究成果等"
+                android:minLines="4"
+                android:paddingLeft="@dimen/dip_15"
+                android:paddingTop="@dimen/dip_20"
+                android:paddingRight="@dimen/dip_15"
+                android:paddingBottom="@dimen/dip_15"
+                android:textColorHint="#DBDBDB"
+                android:textSize="@dimen/fond_14sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bt_sava"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dip_40"
+            android:layout_marginRight="@dimen/dip_40"
+            android:layout_marginBottom="@dimen/dip_10"
+            android:background="@drawable/hom_bt_bg"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_16sp" />
+    </RelativeLayout>
+</LinearLayout>

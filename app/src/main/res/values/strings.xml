@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">师无忧</string>
+    <string name="app_Login">登录</string>
+    <string name="app_Register">注册</string>
+    <string name="app_Main">主界面</string>
+    <string name="app_Setting">设置</string>
+    <string name="app_TeacherInformation">老师信息</string>
+    <string name="app_Universityonisgrad">毕业院校</string>
+    <string name="app_Title">职称</string>
+    <string name="app_RewardsAndHonors">奖励荣誉</string>
+    <string name="app_TeachingExperience">教学经历</string>
+    <string name="app_SuccessfulCase">成功案例</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dip_10"
+    android:layout_marginTop="@dimen/dip_5"
+    android:layout_marginRight="@dimen/dip_10"
+    android:layout_marginBottom="@dimen/dip_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_80"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/dip_110"
+            android:layout_height="@dimen/dip_80"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_home_test1"
+            app:riv_corner_radius="@dimen/dip_5" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/fond_14sp"
+                android:paddingLeft="@dimen/dip_10"
+                android:textColor="@color/myColor"
+                android:text="逻辑思维助力教学研究逻辑思维助力教学研究逻辑思维助力教学研究"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/fond_12sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="@dimen/dip_10"
+                android:textColor="#929395"
+                android:text="09月26日 11:38:22"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/dip_5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_1"
+        android:background="#F2F4F7" />
+</LinearLayout>
