@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/ivNotImg"
+        android:layout_marginTop="@dimen/dip_110"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/dp_217"
+        android:src="@mipmap/approved_pic_ai"
+        android:layout_height="@dimen/dp_217"/>
+    <TextView
+        android:id="@+id/tvContext"
+        android:layout_marginTop="@dimen/dp_35"
+        android:text="你已经开课成功啦
+快去挑选课程吧"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_45"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotImg"
+        app:layout_constraintStart_toStartOf="@+id/ivNotImg"
+        app:layout_constraintTop_toBottomOf="@+id/ivNotImg"
+        android:layout_width="@dimen/dp_0"
+        android:textColor="@color/color_707070"
+        android:textSize="@dimen/sp_14"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginHorizontal="@dimen/dp_44"
+        android:id="@+id/btSuccessfulOpeningOfTheCourse"
+        app:layout_constraintTop_toBottomOf="@+id/tvContext"
+        android:layout_width="match_parent"
+        android:text="进入首页"
+        android:gravity="center"
+        android:textSize="@dimen/fond_16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_445dfd_r4_bg"
+        android:layout_height="@dimen/dp_40"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

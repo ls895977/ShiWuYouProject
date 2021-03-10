@@ -4,6 +4,7 @@ import com.blankj.utilcode.util.RegexUtils
 import com.example.shiwuyouproject.base.BaseVmActivity
 import com.example.shiwuyouproject.databinding.ActivityRegisterBinding
 import com.example.shiwuyouproject.ui.modelview.RegisterViewModel
+import com.example.shiwuyouproject.utils.ActStartUtils
 import com.example.shiwuyouproject.utils.CountDownTimerUtils
 import com.yechaoa.yutilskt.ToastUtil
 import com.yechaoa.yutilskt.YUtils
@@ -41,7 +42,9 @@ class RegisterActivity:BaseVmActivity<ActivityRegisterBinding, RegisterViewModel
           mViewModel.smsSend(username)
 
       }
-
+    mBinding.btRegister.setOnClickListener {
+        ActStartUtils.startAct(this,ApplyForPartTimeCoursesActivity::class.java)
+    }
     }
     override fun observe() {
         mViewModel.myCodeState.observe(this,{

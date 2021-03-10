@@ -18,7 +18,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
         <activity android:name=".ui.MainActivity"
-            android:label="@string/app_Main"
+            android:launchMode="singleTask"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +46,9 @@
             />
         <activity android:name=".ui.fragment.my.activity.SuccessfulCaseActivity"
             android:label="@string/app_SuccessfulCase"
+            />
+        <activity android:name=".ui.ApplyForPartTimeCoursesActivity"
+            android:label="@string/app_ApplyForPartTimeCourses"
             />
     </application>
 

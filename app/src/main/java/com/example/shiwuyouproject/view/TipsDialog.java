@@ -20,7 +20,6 @@ import com.example.shiwuyouproject.callback.DialogCallback;
 public class TipsDialog {
     private static Dialog dialog;
     private static  TipsDialog tipsDialog;
-
     private static  TipsDialog getInstance() {
         if (tipsDialog == null)
             tipsDialog = new  TipsDialog();
