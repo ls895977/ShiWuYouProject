@@ -1,84 +1,407 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    android:background="#F2F4F7"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#F2F4F7">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clItem1"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/dip_8"
-        android:background="@drawable/shape_ffffff_r10_bg"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginHorizontal="@dimen/dip_8"
-        android:layout_height="@dimen/dp_180">
-       <TextView
-           android:id="@+id/tvRealNameAuthentication"
-           android:layout_width="match_parent"
-           android:text="实名认证"
-           android:paddingLeft="@dimen/sp_16"
-           android:textSize="@dimen/dp_16"
-           android:gravity="center_vertical"
-           android:textColor="@color/color_707070"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           android:layout_height="@dimen/dip_59"/>
-        <View
-            android:id="@+id/view1"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clItem1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
             android:layout_marginHorizontal="@dimen/dip_8"
-            app:layout_constraintTop_toBottomOf="@+id/tvRealNameAuthentication"
-            android:layout_width="match_parent"
-            android:background="#F2F4F7"
-            android:layout_height="@dimen/dp_1"/>
-        <TextView
-            android:id="@+id/tvNatureOfWork"
-            android:layout_width="match_parent"
-            android:text="工作性质"
-            android:paddingStart="@dimen/sp_16"
-            android:textSize="@dimen/dp_16"
-            android:gravity="center_vertical"
-            android:textColor="@color/color_707070"
-            app:layout_constraintTop_toBottomOf="@+id/view1"
+            android:layout_marginTop="@dimen/dip_8"
+            android:background="@drawable/shape_ffffff_r10_bg"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="@dimen/dip_59"/>
-        <View
-            android:id="@+id/view2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRealNameAuthentication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvRealNameAuthentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="实名认证"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRealNameAuthenticationStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRealNameAuthentication"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvRealNameAuthentication" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dip_8"
+                android:background="#F2F4F7"
+                app:layout_constraintTop_toBottomOf="@+id/clRealNameAuthentication" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNatureOfWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view1">
+
+                <TextView
+                    android:id="@+id/tvNatureOfWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="工作性质"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNatureOfWorkStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvNatureOfWork"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvNatureOfWork" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dip_8"
+                android:background="#F2F4F7"
+                app:layout_constraintTop_toBottomOf="@+id/clNatureOfWork" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clWorkingCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                <TextView
+                    android:id="@+id/tvWorkingCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="工作性质"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWorkingConditionStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvWorkingCondition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvWorkingCondition" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clItem2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:paddingHorizontal="@dimen/dp_16"
             android:layout_marginHorizontal="@dimen/dip_8"
-            app:layout_constraintTop_toBottomOf="@+id/tvNatureOfWork"
-            android:layout_width="match_parent"
-            android:background="#F2F4F7"
-            android:layout_height="@dimen/dp_1"/>
-        <TextView
-            android:id="@+id/tvWorkingCondition"
-            android:layout_width="match_parent"
-            android:text="工作状态"
-            android:paddingStart="@dimen/sp_16"
-            android:textSize="@dimen/dp_16"
-            android:gravity="center_vertical"
-            android:textColor="@color/color_707070"
-            app:layout_constraintTop_toBottomOf="@+id/view2"
+            android:layout_marginTop="@dimen/dip_8"
+            android:background="@drawable/shape_ffffff_r10_bg"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="@dimen/dip_59"/>
+            app:layout_constraintTop_toBottomOf="@+id/clItem1">
+
+            <TextView
+                android:id="@+id/tvPersonalData"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dip_59"
+                android:gravity="center_vertical"
+                android:text="工作性质"
+                android:textColor="@color/color_707070"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPersonalDataStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@mipmap/icon_right"
+                android:drawablePadding="@dimen/dp_5"
+                android:includeFontPadding="false"
+                android:text="请选择"
+                android:textColor="@drawable/chose_fond_selecte"
+                android:textSize="@dimen/fond_16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPersonalData"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPersonalData" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clItem3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:layout_marginHorizontal="@dimen/dip_8"
+            android:layout_marginTop="@dimen/dip_8"
+            android:background="@drawable/shape_ffffff_r10_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clItem2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="学科科目"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSubjectStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSubject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSubject" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dip_8"
+                android:background="#F2F4F7"
+                app:layout_constraintTop_toBottomOf="@+id/clSubject" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTeachingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11">
+
+                <TextView
+                    android:id="@+id/tvTeachingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="授课时间"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTeachingTimeStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTeachingTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTeachingTime" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dip_8"
+                android:background="#F2F4F7"
+                app:layout_constraintTop_toBottomOf="@+id/clTeachingTime" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTeachingAddressORRegion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view22">
+
+                <TextView
+                    android:id="@+id/tvTeachingAddressORRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="授课地址/地区"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTeachingAddressORRegionStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTeachingAddressORRegion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTeachingAddressORRegion" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clItem4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginHorizontal="@dimen/dip_8"
+            android:layout_marginTop="@dimen/dip_8"
+            android:background="@drawable/shape_ffffff_r10_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clItem3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAudioOrVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvAudioOrVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="录音/视频"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvudioOrVideoStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAudioOrVideo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvAudioOrVideo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view111"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginHorizontal="@dimen/dip_8"
+                android:background="#F2F4F7"
+                app:layout_constraintTop_toBottomOf="@+id/clAudioOrVideo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAsicServiceCriteria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view111">
+
+                <TextView
+                    android:id="@+id/tvAsicServiceCriteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dip_59"
+                    android:gravity="center_vertical"
+                    android:text="基本服务准则"
+                    android:textColor="@color/color_707070"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAsicServiceCriteriaStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="请选择"
+                    android:textColor="@drawable/chose_fond_selecte"
+                    android:textSize="@dimen/fond_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAsicServiceCriteria"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvAsicServiceCriteria" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/btApplyForAnInTerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginHorizontal="@dimen/dp_44"
+            android:layout_marginTop="@dimen/sp_23"
+            android:background="@drawable/shape_445dfd_r4_bg"
+            android:gravity="center"
+            android:text="申请面试"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clItem4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <TextView
-        android:id="@+id/btApplyForAnInTerView"
-        android:layout_marginTop="@dimen/sp_23"
-        app:layout_constraintTop_toBottomOf="@+id/clItem1"
-        android:layout_marginHorizontal="@dimen/dp_44"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:text="申请面试"
-        android:gravity="center"
-        android:textSize="@dimen/fond_16sp"
-        android:textColor="@color/white"
-        android:background="@drawable/shape_445dfd_r4_bg"
-        android:layout_height="@dimen/dp_40"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

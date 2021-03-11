@@ -15,6 +15,7 @@ interface Api {
 
     companion object {
         const val BASE_URL = "http://www.icootoo.com/fastks/public/api/"
+        const val Web_URL="http://www.icootoo.com/fastks/public/index/user/contract.html?token="//协议地址
     }
     //登录
     @POST("sms/send")
