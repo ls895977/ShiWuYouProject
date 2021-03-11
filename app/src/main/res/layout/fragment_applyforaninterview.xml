@@ -45,7 +45,7 @@
                     android:drawableEnd="@mipmap/icon_right"
                     android:drawablePadding="@dimen/dp_5"
                     android:includeFontPadding="false"
-                    android:text="请选择"
+                    android:text="请认证"
                     android:textColor="@drawable/chose_fond_selecte"
                     android:textSize="@dimen/fond_16sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tvRealNameAuthentication"

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/clTitleBar"
+        layout="@layout/titlebar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:background="@drawable/shape_dbdbdb_r10_bg"
+        app:layout_constraintTop_toBottomOf="@+id/clTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60">
+        <TextView
+            android:id="@+id/tvTanHao"
+            android:layout_marginTop="@dimen/dip_8"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/dp_18"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="@dimen/dp_16"
+            android:text="!"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/fond_12sp"
+            android:textStyle="bold"
+            android:background="@drawable/shape_5381a4_r30_bg"
+            android:layout_height="@dimen/dp_16"/>
+        <TextView
+            app:layout_constraintTop_toTopOf="@+id/tvTanHao"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dip_25"
+            app:layout_constraintStart_toEndOf="@+id/tvTanHao"
+            android:layout_width="@dimen/dp_0"
+            android:textSize="@dimen/sp_16"
+            android:textColor="#5381A4"
+            android:text="我们将严格保护您的隐私，请务必确保真实、有效的信息"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@+id/clMessage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dip_30">
+
+            <TextView
+                android:id="@+id/tvUploadTheFrontOfIDCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip_25"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="上传身份证正面"
+                android:textColor="#3A4759"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clUploadTheFrontOfIDCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:layout_marginHorizontal="@dimen/dip_25"
+                android:layout_marginTop="@dimen/sp_14"
+                android:background="@drawable/shape_5580fe_r10_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadTheFrontOfIDCard">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_uploadIDCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/dip_30"
+                    android:layout_marginVertical="@dimen/dp_20"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_zhicheng"
+                    app:riv_corner_radius="@dimen/dp_10"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvCardNumberDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="请上传身份证正面照片必须看清证件号码及照片"
+                android:textColor="@color/color_707070"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clUploadTheFrontOfIDCard" />
+
+            <TextView
+                android:id="@+id/tvUploadBackOfIDCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip_25"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="上传身份证背面"
+                android:textColor="#3A4759"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCardNumberDes" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clUploadBackOfIDCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:layout_marginHorizontal="@dimen/dip_25"
+                android:layout_marginTop="@dimen/sp_14"
+                android:background="@drawable/shape_5580fe_r10_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadBackOfIDCard">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_UploadBackOfIDCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/dip_30"
+                    android:layout_marginVertical="@dimen/dp_20"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_fanmian"
+                    app:riv_corner_radius="@dimen/dp_10"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvCardUploadBackOfIDCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="请上传身份证背面照片"
+                android:textColor="@color/color_707070"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="@+id/clUploadBackOfIDCard"
+                app:layout_constraintStart_toStartOf="@+id/clUploadBackOfIDCard"
+                app:layout_constraintTop_toBottomOf="@+id/clUploadBackOfIDCard" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginHorizontal="@dimen/dp_44"
+                android:layout_marginTop="@dimen/dp_22"
+                android:text="上传识别"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fond_16sp"
+                android:background="@drawable/shape_bgddbdbdb__445dfd_c5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCardUploadBackOfIDCard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
