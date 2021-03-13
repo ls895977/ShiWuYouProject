@@ -31,15 +31,16 @@ object RetrofitClient {
     init {
         val mTokenInterceptor = Interceptor { chain ->
             val originalRequest: Request = chain.request()
-            var authorised: Request?
-            if(SPUtils.getInstance().myUserInfo!=null) {
+            val authorised: Request?
+//            if(SPUtils.getInstance().myUserInfo!=null) {
                 authorised = originalRequest.newBuilder()
-                    .header("X-Access-Token", SPUtils.getInstance().myUserInfo.token)
+//                    .header("X-Access-Token", SPUtils.getInstance().myUserInfo.token)
+                    .header("token","234f184d-42df-456c-8f03-b682f1230084")
                     .build()
                 chain.proceed(authorised)
-            }else{
-                chain.proceed(originalRequest);
-            }
+//            }else{
+//                chain.proceed(originalRequest);
+//            }
         }
         val loggingInterceptor = HttpLoggingInterceptor { Log.e("httpLog", it) }
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY

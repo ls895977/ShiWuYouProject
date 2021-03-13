@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
@@ -27,7 +28,9 @@ public class StringUtils {
     private StringUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
-
+    public static boolean isNullOrEmpty(String s) {
+        return s == null || "".equals(s);
+    }
     /**
      * 判断字符串是否为null或长度为0
      *
@@ -139,7 +142,22 @@ public class StringUtils {
         if (isEmpty(s) || !Character.isUpperCase(s.charAt(0))) return s;
         return String.valueOf((char) (s.charAt(0) + 32)) + s.substring(1);
     }
+    public static boolean inStringArray(String s, String[] array) {
+        for (String x : array) {
+            if (x.equals(s)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    /**
+     * 所有都是UTF-8编码
+     */
+    public static final Charset UTF_8 = Charset.forName("UTF-8");
+    public static byte[] utf8Bytes(String data) {
+        return data.getBytes(UTF_8);
+    }
     /**
      * 反转字符串
      *

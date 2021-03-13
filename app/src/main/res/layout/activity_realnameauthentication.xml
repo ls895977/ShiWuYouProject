@@ -81,9 +81,8 @@
                     android:id="@+id/iv_uploadIDCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="@dimen/dip_30"
-                    android:layout_marginVertical="@dimen/dp_20"
-                    android:scaleType="fitCenter"
+
+                    android:scaleType="fitXY"
                     android:src="@mipmap/icon_zhicheng"
                     app:riv_corner_radius="@dimen/dp_10"
                     tools:ignore="MissingConstraints" />
@@ -128,9 +127,7 @@
                     android:id="@+id/iv_UploadBackOfIDCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="@dimen/dip_30"
-                    android:layout_marginVertical="@dimen/dp_20"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:src="@mipmap/icon_fanmian"
                     app:riv_corner_radius="@dimen/dp_10"
                     tools:ignore="MissingConstraints" />
@@ -150,6 +147,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/clUploadBackOfIDCard" />
 
             <TextView
+                android:id="@+id/btShiBie"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_45"
                 android:layout_marginHorizontal="@dimen/dp_44"

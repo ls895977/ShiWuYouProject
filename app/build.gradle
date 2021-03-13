@@ -98,4 +98,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     //头像
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    // 1 直接导入
+    implementation 'com.qiniu:qiniu-android-sdk:8.2.+'
 }
