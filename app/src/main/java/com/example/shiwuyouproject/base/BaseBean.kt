@@ -6,8 +6,9 @@ import com.sewageproject.net.http.ApiException
  * Created by yechaoa on 2020/2/4.
  * Describe :
  */
-class BaseBean<T>(private val code: Int, private val data: T, private val msg: String?,private val success:Boolean) {
+class BaseBean<T>(private val code: Int, private val data: T, private val msg: String?,private var success:Boolean) {
      fun   success():Boolean{
+         success = msg.equals("success")
          return success
      }
     fun code(): Int {

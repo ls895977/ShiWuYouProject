@@ -2,11 +2,10 @@ package com.example.shiwuyouproject.net.http
 import com.example.shiwuyouproject.base.BaseBean
 import com.example.shiwuyouproject.net.bean.User
 import com.example.shiwuyouproject.ui.bean.SmsSendBean
+import com.example.shiwuyouproject.ui.bean.UserAuthBean
+import com.example.shiwuyouproject.ui.my.bean.PersonalInformationBean
 import okhttp3.RequestBody
-import retrofit2.http.Body
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 /**
  * Created by yechaoa on 2020/2/4.
@@ -33,16 +32,23 @@ interface Api {
             BaseBean<SmsSendBean>
     /**
      * 获取
-     * 保存个人信息
+     * 个人信息
      */
-    @POST("user/update")
-    suspend fun userUpdate():BaseBean<String>
+    @POST("user/get")
+    suspend fun userUpdate():BaseBean<PersonalInformationBean>
 
     /**
      * 保存
      * 保存个人信息
      */
+    @FormUrlEncoded
     @POST("user/update")
-    suspend fun addUserUpdate(@Query("idfront")idfront:String,
-                              @Query("idback")idback:String):BaseBean<String>
+    suspend fun addUserUpdate(@Field("idfront")idfront:String,
+                              @Field("idback")idback:String):BaseBean<String>
+
+    /**
+     * 获取个人认证信息
+     */
+    @GET("user/auth")
+    suspend fun userAuth():BaseBean<UserAuthBean>
 }

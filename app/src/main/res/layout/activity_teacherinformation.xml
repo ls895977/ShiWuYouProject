@@ -5,30 +5,10 @@
     android:background="#F2F4F7"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dip_65"
-        android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/dip_5"
-            android:padding="@dimen/dip_10"
-            android:src="@mipmap/icon_left" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dip_30"
-            android:text="老师信息"
-            android:textColor="@color/myColor"
-            android:textSize="@dimen/dip_18"
-            android:textStyle="bold" />
-    </RelativeLayout>
+    <include
+        android:id="@+id/myTitleBar"
+        layout="@layout/titlebar"/>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -55,6 +35,19 @@
                 android:layout_marginRight="@dimen/dip_10"
                 android:background="@drawable/mybg1"
                 android:orientation="vertical">
+                <TextView
+                    android:id="@+id/bt_userDataConText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/icon_right"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="个人信息（头像、昵称、姓名）"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
                 <TextView
                     android:id="@+id/bt_Universityonisgrad"
                     android:layout_width="match_parent"
@@ -181,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dip_10"
                 android:padding="@dimen/dip_15"
-                android:text="个人偏好"
+                android:text="风采展示"
                 android:textColor="@color/myColor"
                 android:textSize="@dimen/fond_16sp" />
 
@@ -203,64 +196,7 @@
                     android:paddingTop="@dimen/dip_20"
                     android:paddingRight="@dimen/dip_15"
                     android:paddingBottom="@dimen/dip_15"
-                    android:text="教学经历"
-                    android:textColor="#707070"
-                    android:textSize="@dimen/fond_14sp" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dip_0.1"
-                    android:layout_marginLeft="@dimen/dip_10"
-                    android:layout_marginRight="@dimen/dip_10"
-                    android:background="#F2F4F7" />
-                <TextView
-                    android:id="@+id/bt_TeachingAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/icon_right"
-                    android:drawablePadding="@dimen/dip_10"
-                    android:paddingLeft="@dimen/dip_15"
-                    android:paddingTop="@dimen/dip_20"
-                    android:paddingRight="@dimen/dip_15"
-                    android:paddingBottom="@dimen/dip_15"
-                    android:text="授课地址"
-                    android:textColor="#707070"
-                    android:textSize="@dimen/fond_14sp" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dip_0.1"
-                    android:layout_marginLeft="@dimen/dip_10"
-                    android:layout_marginRight="@dimen/dip_10"
-                    android:background="#F2F4F7" />
-                <TextView
-                    android:id="@+id/bt_teachingTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/icon_right"
-                    android:drawablePadding="@dimen/dip_10"
-                    android:paddingLeft="@dimen/dip_15"
-                    android:paddingTop="@dimen/dip_20"
-                    android:paddingRight="@dimen/dip_15"
-                    android:paddingBottom="@dimen/dip_15"
-                    android:text="授课时间"
-                    android:textColor="#707070"
-                    android:textSize="@dimen/fond_14sp" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dip_0.1"
-                    android:layout_marginLeft="@dimen/dip_10"
-                    android:layout_marginRight="@dimen/dip_10"
-                    android:background="#F2F4F7" />
-                <TextView
-                    android:id="@+id/bt_TeachingSubjects"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@mipmap/icon_right"
-                    android:drawablePadding="@dimen/dip_10"
-                    android:paddingLeft="@dimen/dip_15"
-                    android:paddingTop="@dimen/dip_20"
-                    android:paddingRight="@dimen/dip_15"
-                    android:paddingBottom="@dimen/dip_15"
-                    android:text="教学科目"
+                    android:text="照片"
                     android:textColor="#707070"
                     android:textSize="@dimen/fond_14sp" />
             </LinearLayout>

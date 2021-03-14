@@ -16,6 +16,8 @@ import com.luck.picture.lib.config.PictureMimeType
 import com.qiniu.android.common.FixedZone
 import com.qiniu.android.storage.Configuration
 import com.qiniu.android.storage.UploadManager
+import com.yechaoa.yutilskt.ToastUtil
+import com.yechaoa.yutilskt.YUtils
 import java.text.SimpleDateFormat
 import java.util.*
 /**
@@ -51,6 +53,15 @@ class RealNameAuthenticationActivity: BaseVmActivity<ActivityRealnameauthenticat
             openCard()
         }
         mBinding.btShiBie.setOnClickListener {
+            if(carPthZhen.isBlank()){
+                ToastUtil.show("请上传身份证正面图片！")
+                return@setOnClickListener
+            }
+            if(carPthFan.isBlank()){
+                ToastUtil.show("请上传身份证反面图片！")
+                return@setOnClickListener
+            }
+            YUtils.showLoading(this, "上传中...")
           mViewModel.preservationCard(carPthZhen,carPthFan)
         }
     }
@@ -160,5 +171,27 @@ class RealNameAuthenticationActivity: BaseVmActivity<ActivityRealnameauthenticat
             return
         }
         mBinding.btShiBie.isSelected=true
+    }
+
+    override fun observe() {
+        mViewModel.getGenRenStatus.observe(this,{
+            carPthZhen=it.idfront
+            carPthFan=it.idback
+            GlideUtils.fangImgPortrait(this,mBinding.ivUploadIDCard, Api.IMAGEHEAD+carPthZhen)
+            GlideUtils.fangImgPortrait(this,mBinding.ivUploadBackOfIDCard, Api.IMAGEHEAD+carPthFan)
+            setBootStatus()
+        })
+        mViewModel.getPostStatus.observe(this,{
+            YUtils.hideLoading()
+            if(it){
+                ToastUtil.show("身份图片，上传成功！")
+                setResult(100)
+                finish()
+            }else{
+                ToastUtil.show("身份图片，上传失败！")
+            }
+
+        })
+
     }
 }

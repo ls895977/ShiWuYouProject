@@ -60,6 +60,9 @@
         <activity android:name=".ui.my.RealNameAuthenticationActivity"
             android:label="@string/app_RealNameAuthentication"
             />
+        <activity android:name=".ui.fragment.my.activity.PersonalInformationActivity"
+            android:label="@string/app_PersonalInformation"
+            />
     </application>
 
 </manifest>

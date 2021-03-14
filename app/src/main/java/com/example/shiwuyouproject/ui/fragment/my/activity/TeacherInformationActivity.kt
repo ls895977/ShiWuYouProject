@@ -15,8 +15,14 @@ class TeacherInformationActivity:BaseVmActivity<ActivityTeacherinformationBindin
         return ActivityTeacherinformationBinding.inflate(layoutInflater)
     }
 
+    override fun initView() {
+        mBinding.myTitleBar.tvTitle.text="老师信息"
+    }
     override fun setListener() {
-        mBinding.tvBack.setOnClickListener { finish() }
+        mBinding.myTitleBar.tvBack.setOnClickListener { finish() }
+        mBinding.btUserDataConText.setOnClickListener { //个人信息
+            ActStartUtils.startForAct(this, PersonalInformationActivity::class.java,100)
+        }
         mBinding.btUniversityonisgrad.setOnClickListener { //毕业院校
             ActStartUtils.startAct(this, UniversityonisgradActivity::class.java)
         }
