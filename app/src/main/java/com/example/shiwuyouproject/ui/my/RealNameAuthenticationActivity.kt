@@ -100,8 +100,6 @@ class RealNameAuthenticationActivity: BaseVmActivity<ActivityRealnameauthenticat
     private fun openCard(){
         PictureSelector.create(this)
                 .openGallery(PictureMimeType.ofImage())
-//            .isEnableCrop(true)//是否开启裁剪
-//                .cropImageWideHigh(8,6)// 裁剪宽高比，设置如果大于图片本身宽高则无效
                 .maxSelectNum(1)//最大选择数量,默认9张
                 .imageEngine(GlideEngine.createGlideEngine())
                 .isCompress(true)//是否压缩

@@ -39,6 +39,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/rlZhiCheng"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -55,6 +56,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <TextView
+                    android:id="@+id/tvZcname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -83,11 +85,13 @@
                 android:layout_marginRight="@dimen/dip_10"
                 android:background="#e0e0e0" />
             <RelativeLayout
+                android:id="@+id/zhichengImg"
                 android:layout_margin="@dimen/dip_20"
                 android:layout_width="match_parent"
                 android:background="@drawable/mybg2"
                 android:layout_height="@dimen/dip_220">
                 <ImageView
+                    android:id="@+id/zcimg"
                     android:layout_width="match_parent"
                     android:src="@mipmap/icon_zhicheng"
                     android:scaleType="fitXY"

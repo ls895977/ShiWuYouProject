@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#F2F4F7"
     android:orientation="vertical">
 
@@ -33,8 +35,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <LinearLayout
-            android:layout_marginTop="@dimen/dip_20"
+            android:paddingBottom="@dimen/dp_100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dip_10"
@@ -59,6 +64,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <EditText
+                    android:id="@+id/etEduschool"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -83,6 +89,7 @@
                 android:background="#e0e0e0" />
 
             <RelativeLayout
+                android:id="@+id/startTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -99,6 +106,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <TextView
+                    android:id="@+id/edustart_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -108,8 +116,9 @@
                     android:paddingTop="@dimen/dip_20"
                     android:paddingRight="@dimen/dip_15"
                     android:paddingBottom="@dimen/dip_15"
-                    android:text="选择时间"
-                    android:textColor="#DBDBDB"
+                    android:hint="选择时间"
+                    android:textColorHint="#DBDBDB"
+                    android:textColor="@color/color_222222"
                     android:textSize="@dimen/fond_14sp" />
             </RelativeLayout>
 
@@ -120,6 +129,7 @@
                 android:layout_marginRight="@dimen/dip_10"
                 android:background="#e0e0e0" />
             <RelativeLayout
+                android:id="@+id/endTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -136,6 +146,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <TextView
+                    android:id="@+id/eduend_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -145,8 +156,9 @@
                     android:paddingTop="@dimen/dip_20"
                     android:paddingRight="@dimen/dip_15"
                     android:paddingBottom="@dimen/dip_15"
-                    android:text="选择时间"
-                    android:textColor="#DBDBDB"
+                    android:hint="选择时间"
+                    android:textColorHint="#DBDBDB"
+                    android:textColor="@color/color_222222"
                     android:textSize="@dimen/fond_14sp" />
             </RelativeLayout>
 
@@ -157,6 +169,7 @@
                 android:layout_marginRight="@dimen/dip_10"
                 android:background="#e0e0e0" />
             <RelativeLayout
+                android:id="@+id/rldegree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -173,6 +186,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <TextView
+                    android:id="@+id/tvdegree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -210,6 +224,7 @@
                     android:textSize="@dimen/fond_14sp" />
 
                 <EditText
+                    android:id="@+id/etmajor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -232,8 +247,136 @@
                 android:layout_marginLeft="@dimen/dip_10"
                 android:layout_marginRight="@dimen/dip_10"
                 android:background="#e0e0e0" />
-        </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="毕业证书"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <EditText
+                    android:id="@+id/eduno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dip_150"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:gravity="right"
+                    android:hint="请输入毕业证书编号"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clUploadTheFrontOfIDCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:layout_marginHorizontal="@dimen/dip_25"
+                android:layout_marginTop="@dimen/sp_14"
+                android:background="@drawable/shape_5580fe_r10_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadTheFrontOfIDCard">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivEduimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/graduation_pic_diploma"
+                    app:riv_corner_radius="@dimen/dp_10"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:gravity="center"
+                android:padding="@dimen/dip_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点击图片上传毕业证书照片"
+                android:textColor="#707070"
+                android:textSize="@dimen/fond_14sp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_0.1"
+                android:layout_marginLeft="@dimen/dip_10"
+                android:layout_marginRight="@dimen/dip_10"
+                android:background="#e0e0e0" />
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dip_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:text="学位证书"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <EditText
+                    android:id="@+id/xwno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dip_150"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dip_10"
+                    android:gravity="right"
+                    android:hint="请输入学位书编号"
+                    android:paddingLeft="@dimen/dip_15"
+                    android:paddingTop="@dimen/dip_20"
+                    android:paddingRight="@dimen/dip_15"
+                    android:paddingBottom="@dimen/dip_15"
+                    android:textColorHint="#DBDBDB"
+                    android:textSize="@dimen/fond_14sp" />
+            </RelativeLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clUploadTheFrontOfIDCard1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_210"
+                android:layout_marginHorizontal="@dimen/dip_25"
+                android:layout_marginTop="@dimen/sp_14"
+                android:background="@drawable/shape_5580fe_r10_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadTheFrontOfIDCard">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/xwimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/graduation_pic_degree"
+                    app:riv_corner_radius="@dimen/dp_10"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:gravity="center"
+                android:padding="@dimen/dip_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点击图片上传学位证书照片"
+                android:textColor="#707070"
+                android:textSize="@dimen/fond_14sp" />
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
         <TextView
             android:id="@+id/bt_sava"
             android:layout_width="match_parent"
