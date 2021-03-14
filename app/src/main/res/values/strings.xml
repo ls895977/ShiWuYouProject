@@ -13,4 +13,5 @@
     <string name="app_ApplyForPartTimeCourses"> 申请兼课</string>
     <string name="app_RealNameAuthentication"> 实名认证</string>
     <string name="app_PersonalInformation"> 个人信息</string>
+    <string name="app_ModifyRemarks"> 修改备注</string>
 </resources>

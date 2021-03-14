@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f0f0f0"
+    android:layout_height="match_parent">
+ <include android:id="@+id/myTitleBar"
+      layout="@layout/titlebar"/>
+    <EditText
+        android:id="@+id/etName"
+        android:layout_marginTop="@dimen/dip_20"
+        android:hint="请输入要修改内容"
+        android:paddingLeft="@dimen/dip_15"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/min_color"
+        android:textColorHint="@color/login_input_hind"
+        android:background="@drawable/shape_rounded_white"
+        app:layout_constraintTop_toBottomOf="@+id/myTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

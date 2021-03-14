@@ -63,6 +63,9 @@
         <activity android:name=".ui.fragment.my.activity.PersonalInformationActivity"
             android:label="@string/app_PersonalInformation"
             />
+        <activity android:name=".ui.fragment.my.activity.ModifyRemarksActivity"
+            android:label="@string/app_ModifyRemarks"
+            />
     </application>
 
 </manifest>

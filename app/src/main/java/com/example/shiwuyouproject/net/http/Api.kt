@@ -51,4 +51,20 @@ interface Api {
      */
     @GET("user/auth")
     suspend fun userAuth():BaseBean<UserAuthBean>
+
+    /**
+     * 保存
+     * 保存头像
+     */
+    @FormUrlEncoded
+    @POST("user/update")
+    suspend fun addUserUpdate(@Field("avatar")avatar:String):BaseBean<String>
+
+    /**
+     * 保存
+     * 保存各种数据
+     */
+    @FormUrlEncoded
+    @POST("user/update")
+    suspend fun addUserUpdate(@FieldMap hashMap:Map<String, String>):BaseBean<String>
 }
